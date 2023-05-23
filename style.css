@@ -1,0 +1,520 @@
+/*
+Theme Name: Cat's Meow
+Author: Avery Howell
+Description: Meow meow meow meow meow
+Version: 1.0
+*/
+
+:root {
+    --color-primary:#0B5841;
+    --color-secondary: #b9692e;
+    --spacing: 3rem;
+    --row: row;
+    --text-xs: 1rem;
+    --text-sm: 1.25rem;
+    --text-md: 1.5rem;
+    --text-lg: 2rem;
+    --text-xl: 3rem;
+    --text-2xl: 6rem;
+    --text-3xl: 8rem;
+  }
+
+body, main, p, h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    min-width: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+
+body, main {
+    background-color: #f2ece2;
+}
+
+section:not(:first-child) {
+    padding: var(--spacing);
+}
+
+h1, h2, h3 {
+    font-family: 'Asul', sans-serif;
+}
+
+p {
+    font-family: 'Chivo', serif;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.hero-title {
+    font-size: var(--text-3xl);
+    color: var(--color-secondary);
+    padding: var(--spacing);
+    text-align: center;
+    position: relative;
+    line-height: 1;
+}
+
+.image-with-cta {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-with-cta--row, .image-with-accordion--row  {
+    display: flex;
+    flex-direction: var(--row);
+}
+
+.image-with-cta--col, .image-with-accordion--col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
+.image-with-cta--leading-title, .image-with-cta--sub-title {
+    font-size: var(--text-2xl);
+    color: var(--color-primary);
+    ;
+    font-weight: 300;
+}
+
+.image-with-cta--image-wrap {
+    border-radius: 30px;
+    margin: var(--spacing);
+    max-width: 432px;
+    max-height: 432px;
+    overflow: hidden;
+    align-self: center;
+}
+
+.image-with-cta--image {
+    transition: .2s;
+}
+
+.image-with-cta--image:hover { 
+    transform: scale(1.1);
+}
+
+.image-with-cta--leading-title {
+    text-align: center;
+}
+
+.image-with-cta--sub-title span {
+    display: none;
+}
+
+.image-with-cta--text {
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    margin-top: var(--spacing);
+    max-width: 550px;
+}
+
+.image-with-cta--button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1.5rem 3rem;
+    font-size: var(--text-sm);
+    border-radius: 30px;
+    align-self: flex-start;
+    text-decoration: none;
+    margin-top: var(--spacing);
+    cursor: pointer;
+}
+
+.image-with-cta--button:hover { 
+    background-color: white;
+    background-image: url('assets/cat-paws.png');
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary)
+}
+
+.image-with-accordion--image-wrap {
+    border-radius: 30px;
+    margin: var(--spacing);
+    overflow: hidden;
+    align-self: center;
+    max-width: 100%;
+}
+
+.image-with-accordion--image {
+    transition: .2s
+}
+
+.image-with-accordion--image:hover {
+    transform: scale(1.1);
+}
+
+
+.image-with-accordion--accordion-heading {
+    display: flex;
+    flex-direction: var(--row);
+    flex-wrap: wrap;
+}
+
+.accordion-heading--hidden { 
+    display: none;
+}
+
+.accordion-heading--trailing { 
+    margin-left: auto;
+}
+
+.accordion-heading--title, .accordion-heading--trailing {
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+}
+
+.image-with-accordion--accordion {
+    margin-top: var(--spacing);
+}
+
+.accordion {
+    border-radius: 30px;
+    border: 1px solid var(--color-primary);
+    padding: 1rem;
+    cursor: pointer;
+    margin-bottom: var(--spacing);
+    transition: 1s;
+    background-image: url('assets/cat-paws.png');
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 150% 150%;
+}
+
+.accordion:hover {
+    background-image: url('assets/cat-paws.png');
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    box-shadow: 5px 5px 20px var(--color-primary);
+}
+
+.accordion--title {
+    color: var(--color-primary);
+    font-size: var(--text-md);
+}
+
+.accordion--inner {
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    color: white;
+    font-size: var(--text-xs);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.accordion--active {
+    background-color: var(--color-primary);
+    transition: 1s;
+    padding: 1rem 2rem 3rem 2rem;
+}
+
+.accordion--active .accordion--title, .accordion--active .accordion--icon {
+    color: white;
+}
+
+.accordion--active .accordion--inner {
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.accordion--upper {
+    display: flex;
+    flex-direction: var(--row);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion--icon {
+    font-size: var(--text-md);
+    padding-right: 1.5rem;
+    color: var(--color-primary);
+}
+
+.footer {
+    background-color: var(--color-primary);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    display: flex;
+    flex-direction: var(--row);
+    justify-content: space-between;
+    padding: var(--spacing);
+}
+
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer--col {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.footer--row {
+    display: flex;
+    flex-direction: var(--row);
+    justify-content: flex-end;
+}
+
+.footer--row .footer--col {
+    flex-basis: 30%;
+}
+
+.footer ul a, .footer--menu-title {
+    color: white;
+    text-decoration: none;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+}
+
+.footer--title {
+    color: white;
+    font-size: var(--text-lg);
+    font-family: 'Asul', serif;
+}
+
+.footer--socials {
+    display: flex;
+    flex-direction: var(--row);
+    justify-content: space-between;
+    max-width: 120px;
+    font-size: var(--text-md) !important;
+}
+
+.footer--company, .footer--support {
+    font-family: 'Chivo';
+    font-weight: 300;
+}
+
+.footer--company li:hover::before, .footer--support li:hover::before {
+    content: "";
+    position: absolute;
+    background-image: url('assets/cat-paws.png');
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    filter: brightness(0%) invert(100%);
+    left: -2rem;
+    padding: 1rem;
+}
+
+.mobile-menu, .mobile-menu--open {
+    background-color: var(--color-secondary);
+    position: fixed;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+    transition: 1s;
+}
+
+.mobile-menu {
+    left: -50%;
+}
+
+.mobile-menu--open {
+    left: 0;
+}
+
+.mobile-menu--nav {
+    font-size: 80px;
+    letter-spacing: 1px;
+    list-style-type: none;
+}
+
+.mobile-menu--nav a {
+    font-family: 'Asul', serif;
+    text-decoration: none;
+    color: black;
+    line-height: 1.5;
+ }
+
+ .mobile-menu--nav a:hover {
+     font-weight: bold;
+ }
+
+.mobile-menu--trigger {
+    position: absolute;
+    right: -4rem;
+    top: 6rem;
+    background-color: var(--color-secondary);
+    border-radius: 60px;
+    padding: 1.5rem 1.5rem 1.5rem 1rem;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 912px) {
+    :root {
+        --spacing: 3rem;
+        --row: column;
+        --text-2xl: 3rem;
+        --text-xl: 2.5rem;
+        --text-md: 1.25rem;
+        --text-sm: 1.15rem;
+    }
+
+    .mobile-menu--nav {
+        font-size: 60px;
+    }
+
+    .mobile-menu, .mobile-menu--open {
+        width: 80vw;
+    }
+    
+    .mobile-menu {
+        left: -80%;
+    }
+
+    .image-with-cta--row, .image-with-accordion--row, .accordion--upper, .footer, .footer--row, .footer--socials {
+        flex-direction: row;
+    }
+
+    .hero {
+        background-position: bottom left;
+    }
+
+    .image-with-cta {
+        display: flex;
+    }
+    
+    .image-with-cta--row, .image-with-accordion--row  {
+        justify-content: space-between;
+    }
+    
+    .image-with-cta--col, .image-with-accordion--col {
+        display: flex;
+        flex-basis: 45%;
+        margin: 1rem;
+    }
+    
+    .image-with-cta--leading-title, .image-with-cta--sub-title {
+        font-size: var(--text-2xl);
+        color: var(--color-primary);
+        ;
+        font-weight: 300;
+    }
+    
+    .image-with-cta--image-wrap {
+        border-radius: 30px;
+        margin: var(--spacing);
+        overflow: hidden;
+        align-self: center;
+    }
+
+    .image-with-cta--leading-title {
+        text-align: center;
+    }
+    
+    .image-with-accordion--accordion-heading {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 80%;
+    }
+    
+
+    .accordion-heading--hidden, .accordion-heading--title { 
+        display: inline;
+        font-size: var(--text-xl);
+    }
+
+    .accordion-heading--trailing { 
+        display: none;
+    }
+
+    .image-with-cta--leading-title {
+        display: none;
+    }
+
+    .image-with-cta--sub-title span {
+        display: inline;
+    }
+
+    .image-with-accordion--image-wrap, .image-with-accordion--image-wrap {
+        max-height: 40vh;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --spacing: 1.25rem;
+        --row: column;
+        --text-3xl: 6rem;
+        --text-2xl: 4rem;
+    }
+
+    .mobile-menu--nav {
+        padding: 3rem;
+        font-size: 30px;
+    }
+
+    .mobile-menu, .mobile-menu--open {
+        width: 80vw;
+    }
+    
+    .mobile-menu {
+        left: -80%;
+    }
+
+    section:not(:first-child) {
+        padding: 3rem var(--spacing);
+    }
+   
+
+    .image-with-cta--leading-title {
+        display: none;
+    }
+
+    .image-with-cta--sub-title span {
+        display: block;
+    }
+
+    .hero {
+        background-position: 10% 100%;
+    }
+
+    .image-with-cta--image, .image-with-cta--image-wrap {
+        max-width: 90vw;
+    }
+
+    .image-with-accordion--image-wrap, .image-with-accordion--image-wrap {
+        max-height: 50vh;
+        max-width: 90vw;
+    }
+
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer--socials, .accordion--upper {
+        flex-direction: row;
+    }
+
+    .footer--row {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .footer--row .footer--col {
+        flex-basis: 50%;
+    }
+}
